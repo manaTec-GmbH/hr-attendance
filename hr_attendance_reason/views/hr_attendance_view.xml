@@ -9,7 +9,11 @@
             <sheet position="inside">
                 <group name="reason">
                     <group>
-                        <field name="attendance_reason_ids" widget="many2many_tags" />
+                        <field
+                            name="attendance_reason_ids"
+                            widget="many2many_tags"
+                            options="{'no_create': True}"
+                        />
                     </group>
                 </group>
             </sheet>
@@ -22,7 +26,11 @@
         <field name="priority">500</field>
         <field name="arch" type="xml">
             <field name="worked_hours" position="after">
-                <field name="attendance_reason_ids" widget="many2many_tags" />
+                <field
+                    name="attendance_reason_ids"
+                    widget="many2many_tags"
+                    options="{'no_create': True}"
+                />
             </field>
         </field>
     </record>
